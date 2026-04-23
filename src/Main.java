@@ -14,10 +14,11 @@ public class Main {
         case 1:  {
             System.out.println("Digite a velocidade média:");
             double valor = sc.nextDouble();
-            VelocidadeEmKm velocidade = new VelocidadeEmKm(valor);
+            VelocidadeKm velocidade = new VelocidadeEmKm(valor);
             double tempo = 15.0 / velocidade.getVelocidadeEmKm();
             tempo = velocidade.tempoEmMinutos(tempo);
-            System.out.println("mostrando tudo"+ tempo);
+            System.out.println("Tempo de percurso: 1"+ tempo);
+            break;
         }
         case 2:  {
             System.out.println("Digite a velocidade média: ");
@@ -26,7 +27,8 @@ public class Main {
             VelocidadeKm velocidade = new AdapterMPHParaKm(velocidadeEmMPH);
             double tempo = 15.0 / velocidade.getVelocidadeEmKm();
             tempo = velocidade.tempoEmMinutos(tempo);
-            System.out.println("tempu"+tempo);
+            System.out.println("Tempo de percurso: "+tempo);
+            break;
         }
     }
 
